@@ -8,16 +8,19 @@
 
 <title>EmTrip | 本物の沖縄文化体験</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* BASE */
 
 body{
 font-family:'Noto Sans JP',sans-serif;
 margin:0;
-background:#FFFFFF;
+background:#ffffff;
 color:#333;
-line-height:1.8;
+line-height:1.9;
+letter-spacing:0.05em;
 }
 
 /* HEADER */
@@ -26,24 +29,30 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-border-bottom:1px solid #eee;
+padding:24px 50px;
 background:white;
+border-bottom:1px solid #eee;
 }
 
 .logo{
 font-size:24px;
 font-weight:700;
 color:#4653A2;
+letter-spacing:2px;
 }
 
 .cta-button{
 background:#ED6D46;
 color:white;
-padding:12px 24px;
+padding:12px 26px;
 border-radius:6px;
 text-decoration:none;
 font-weight:600;
+transition:0.3s;
+}
+
+.cta-button:hover{
+opacity:0.8;
 }
 
 /* HERO */
@@ -52,7 +61,7 @@ font-weight:600;
 background:url(images/hero.jpg);
 background-size:cover;
 background-position:center;
-height:85vh;
+height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -68,32 +77,36 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.35);
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.65)
+);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:800px;
+max-width:900px;
+padding:20px;
 }
 
 .hero h1{
-font-family:'Yomogi', cursive;
-font-size:48px;
-margin-bottom:20px;
-letter-spacing:2px;
-text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+font-family:'Zen Kurenaido', serif;
+font-size:56px;
+line-height:1.5;
+margin-bottom:25px;
+text-shadow:0 4px 20px rgba(0,0,0,0.7);
 }
 
 .hero p{
-font-family:'Yomogi', cursive;
 font-size:22px;
+opacity:0.9;
 }
 
 /* SECTION */
 
 .section{
-padding:80px 20px;
+padding:110px 20px;
 max-width:1100px;
 margin:auto;
 }
@@ -101,11 +114,12 @@ margin:auto;
 .section-title{
 text-align:center;
 font-size:34px;
-margin-bottom:40px;
+margin-bottom:50px;
 color:#4653A2;
+font-weight:700;
 }
 
-/* CARD GRID */
+/* GRID */
 
 .grid{
 display:grid;
@@ -114,26 +128,26 @@ gap:30px;
 }
 
 .card{
-border:1px solid #eee;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
-transition:0.3s;
 background:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card img{
 width:100%;
-height:220px;
+height:240px;
 object-fit:cover;
 }
 
 .card-body{
-padding:20px;
+padding:26px;
 }
 
 .card-title{
@@ -146,29 +160,31 @@ margin-bottom:10px;
 color:#ED6D46;
 font-weight:700;
 font-size:18px;
+margin-top:10px;
 }
 
 /* FLOW */
 
 .flow{
 display:flex;
-gap:30px;
+gap:25px;
 flex-wrap:wrap;
 justify-content:center;
 }
 
 .step{
-background:#f6f7fb;
-padding:25px;
-border-radius:8px;
+background:#f7f8fc;
+padding:30px;
+border-radius:10px;
 width:180px;
 text-align:center;
 }
 
 .step-number{
-font-size:22px;
+font-size:24px;
 color:#4653A2;
 font-weight:700;
+margin-bottom:10px;
 }
 
 /* GALLERY */
@@ -181,7 +197,7 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:8px;
+border-radius:10px;
 }
 
 /* CTA */
@@ -190,22 +206,28 @@ border-radius:8px;
 background:#4653A2;
 color:white;
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
 .cta h2{
 font-size:36px;
-margin-bottom:30px;
+margin-bottom:35px;
+line-height:1.6;
 }
 
 .cta-button-large{
 background:#ED6D46;
-padding:18px 50px;
+padding:18px 55px;
 font-size:18px;
 border-radius:8px;
 color:white;
 text-decoration:none;
 font-weight:700;
+transition:0.3s;
+}
+
+.cta-button-large:hover{
+opacity:0.85;
 }
 
 /* FOOTER */
@@ -230,7 +252,7 @@ grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:32px;
+font-size:36px;
 }
 
 }
@@ -253,8 +275,6 @@ EmTrip
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="hero-content">
@@ -273,8 +293,6 @@ EmTrip
 
 </section>
 
-<!-- CONCEPT -->
-
 <section class="section">
 
 <h2 class="section-title">
@@ -292,8 +310,6 @@ EmTripの文化体験
 </p>
 
 </section>
-
-<!-- EXPERIENCE -->
 
 <section class="section">
 
@@ -314,12 +330,10 @@ EmTripの文化体験
 </div>
 
 <p>
-
 踊りを見る<br>
 踊りを習う<br>
 衣装を着る<br>
 みんなで踊る
-
 </p>
 
 <div class="price">
@@ -341,10 +355,8 @@ EmTripの文化体験
 </div>
 
 <p>
-
 村の青年会と  
 直接交流します。
-
 </p>
 
 <div class="price">
@@ -366,10 +378,8 @@ EmTripの文化体験
 </div>
 
 <p>
-
 衣装を着て  
 記念撮影します。
-
 </p>
 
 <div class="price">
@@ -383,8 +393,6 @@ EmTripの文化体験
 </div>
 
 </section>
-
-<!-- FLOW -->
 
 <section class="section">
 
@@ -423,8 +431,6 @@ EmTripの文化体験
 
 </section>
 
-<!-- GALLERY -->
-
 <section class="section">
 
 <h2 class="section-title">
@@ -444,15 +450,11 @@ EmTripの文化体験
 
 </section>
 
-<!-- CTA -->
-
 <section class="cta" id="reserve">
 
 <h2>
-
 沖縄旅行を  
 「見る観光」で終わらせますか？
-
 </h2>
 
 <a href="https://forms.gle/xxxxx" class="cta-button-large">
